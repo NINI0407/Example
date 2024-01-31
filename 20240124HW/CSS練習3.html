@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .back {
+            background-color: rgba(193, 237, 248, 0.888);
+            width: 300px;
+            height: 30px;
+            display: flex;
+        }
+
+        .loading {
+            background-color: rgb(99, 173, 233);
+            width: 200px;
+            height: 20px;
+            margin: 5px;
+            animation-name: load;
+            animation-duration: 4s;
+        }
+
+        @keyframes load {
+            0% {
+                background-color: rgb(99, 173, 233);
+                width: 0px;
+            }
+
+            25% {
+                background-color: rgb(99, 173, 233);
+                width: 50px;
+            }
+
+            50% {
+                background-color: rgb(99, 173, 233);
+                width: 100px;
+            }
+
+            75% {
+                background-color: rgb(99, 173, 233);
+                width: 150px;
+            }
+
+            100% {
+                background-color: rgb(99, 173, 233);
+                width: 200px;
+            }
+        }
+
+        .finish {
+            animation-duration: 4.8s;
+            animation-name: finish;
+            padding: 5px;
+            display: inline;
+            float: right;
+            color: rgba(193, 237, 248, 0.888);
+            animation-fill-mode: forwards;
+            /* 保持动画结束后状态 */
+        }
+
+        @keyframes finish {
+
+            0%,
+            25%,
+            50%,
+            75% {
+                color: rgba(193, 237, 248, 0.888);
+            }
+
+            100% {
+                color: rgb(99, 173, 233);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="loading"></div>
+        <div class="finish">✔</div>
+    </div>
+</body>
+
+</html>
